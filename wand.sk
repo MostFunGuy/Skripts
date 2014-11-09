@@ -1,0 +1,92 @@
+
+
+
+
+
+
+command /basicwand:
+	trigger:
+		set the player's level to 0
+		set the player's level progress to 0
+		set {level.%player%} to 0.9999
+		set the player's level progress to {level.%player%}
+		give player 1 of stick named "Basic Wand" with lore "Basic Wand Item"
+
+
+
+on click with stick:
+	line 1 of the lore of player's tool is "Basic Wand"
+	if {level.%player%} is more than 0:
+		remove 1 of the held item from the player
+		set {_loc} to location at player's head
+		set {_loc} to the location 1.7 meters in direction of player from location of {_loc}
+		set the player's level progress to {level.%player%}
+		set {level.%player%} to {level.%player%} - 0.025
+		loop 50 times:
+			set {_loc} to the location 1.2 meter in direction of player from location of {_loc}
+
+			spawn 1 of particle fireworks Spark at {_loc}
+			loop all entities where [distance between {_loc} and entity input is less than 1]:
+				loop-entity is not player
+				damage loop-entity by 3 hearts
+	else:
+		message "NO"
+	#set {_loc} to location at player's head
+	#set {_loc} to the location 1.7 meters in direction of player from location of {_loc}
+	#reduce the player's level progress by 0.05
+	#loop 50 times:
+	#	set {_loc} to the location 1.2 meter in direction of player from location of {_loc}
+
+	#	spawn 1 of particle fireworks Spark at {_loc}
+	#	loop all entities where [distance between {_loc} and entity input is less than 1]:
+	#		loop-entity is not player
+	#		damage loop-entity by 3 hearts
+#
+
+command /basicblaster:
+	trigger:
+		player is op
+		give player 1 of bone named "Basic Blaster" with lore "Basic Blaster"
+
+on rightclick with bone:
+	line 1 of the lore of player's tool is "Basic Blaster"
+	cancel event
+	remove 1 of the held item from the player
+	shoot a snowball with speed 5
+	spawn 10 of particle cloud at the projectile
+
+
+
+
+
+on projectile hit:
+	projectile is snowball:
+		set {_block} to location of projectile
+		create a safe explosion of force 10 at {_block}
+
+
+
+command /confetti stick:
+	trigger:
+		player is op
+		give player 64 of stick named "Confetti Stick" with lore "Confetti Stick"
+
+on click with stick:
+	line 1 of the lore of player's tool is "Confetti Stick"
+	remove 1 stick named "Confetti Stick" from the player
+
+	set {_loc} to location at player's head
+	set {_loc} to the location 1.7 meters in direction of player from location of {_loc}
+	loop 10 times:
+		set {_loc} to the location 3 meter in direction of player from location of {_loc}
+		spawn 100 of particle red dust:2 offset by 1, 1, 1 at {_loc}
+
+
+
+
+
+command /energyitem:
+	trigger:
+		player is op
+		give player 1 of blaze powder named "Energy Refill" with lore "Energy Refill"
+

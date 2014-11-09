@@ -1,0 +1,26 @@
+on click on sign:
+	if line 3 of the block is "Solo Maze":
+		teleport player to {waitloc}
+		message "Generating random maze"
+		wait 4 ticks
+		execute console command "/cw -o -403 101 -4 -w minigameworld cs maze.js 155 10 10 4 2 ief"
+		wait 1 second
+		teleport the player to {location}
+
+
+on click on sign:
+	if line 3 of the block is "go to spawn":
+		execute console command "/warp spawn %player%"
+on click on sign:
+	if line 3 of the block is "spawn":
+		execute console command "/warp spawn %player%"
+
+
+command /setloc:
+	trigger:
+		set {waitloc} to location of the player
+		set {location} to location at -403.5, 101, -3 in world "minigameworld"
+		set {loc1} to location at -1993.5, 110, -529.5 in world "minigameworld"
+		set {loc2} to location at -1985.5, 110, -539.5 in world "minigameworld"
+		set {parkourrace2point2} to location at -1985.5, 110, -532.5 in world "minigameworld"
+		set {parkourrace2point1} to location at -1993.5, 110, -532.5 in world "minigameworld"

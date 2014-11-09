@@ -1,0 +1,66 @@
+on pick up of stick:
+	if lore of item is "Basic Wand Item":
+		cancel event
+		if block 2 blocks beneath dropped item is yellow wool:
+			if player does not have a stick:
+				set {_loc1} to the location 3 blocks below
+				set {_loc2} to the location 1 blocks above
+				set {_loc3} to the location at entity
+				teleport entity to {_loc1}
+				give player 48 of stick named "Basic Wand" with lore "Basic Wand"
+				send action bar from "<Blue>You have gotten some Basic Wands" to player
+
+				spawn 65 of particle smoke offset by 0.5, 0.5, 0.5 at {_loc3}
+				wait 5 seconds
+				teleport entity to {_loc2}
+				spawn 60 of particle happy Villager offset by 0.5, 0.5, 0.5 at {_loc2}
+			else:
+				player doesn't have 64 sticks
+				set {_loc1} to the location 3 blocks below
+				set {_loc2} to the location 1 blocks above
+				set {_loc3} to the location at entity
+				teleport entity to {_loc1}
+				set {Num.%player%} to 64
+				set {numOfSticks.%player%} to number of sticks in the player's inventory
+				remove {numOfSticks.%player%} from {Num.%player%}
+				set {Num.%player%} to ({Num.%player%}*0.5)
+				set {Round.%player%} to ceil({Num.%player%})
+				give player {Round.%player%} of stick named "Basic Wand" with lore "Basic Wand"
+				send action bar from "<Blue>You have gotten some Basic Wands" to player
+
+				spawn 65 of particle smoke offset by 0.5, 0.5, 0.5 at {_loc3}
+				wait 5 seconds
+				teleport entity to {_loc2}
+				spawn 60 of particle happy Villager offset by 0.5, 0.5, 0.5 at {_loc2}
+				delete {numOfSticks.%player%}
+				delete {Num.%player%}
+				delete {Round.%player%}
+			
+
+on click on beacon:
+	if block below is wool:
+		cancel event
+
+on item despawn:
+	if block 2 blocks beneath dropped item is wool:
+		cancel event
+
+
+
+
+
+on pick up of blaze powder:
+	if lore of item is "Energy Refill":
+		cancel event
+		if {level.%player%} is less than 0.9999:
+			if block 2 or 3 blocks beneath dropped item is green wool:
+				set {level.%player%} to 0.9999
+				set the player's level progress to {level.%player%}
+				set {_loc1} to the location 3 blocks below
+				set {_loc2} to the location 1 blocks above
+				set {_loc3} to the location at entity
+				teleport entity to {_loc1}
+				spawn 65 of particle smoke offset by 0.5, 0.5, 0.5 at {_loc3}
+				wait 10 seconds
+				teleport entity to {_loc2}
+				spawn 60 of particle happy Villager offset by 0.5, 0.5, 0.5 at {_loc2}

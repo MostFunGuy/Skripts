@@ -1,0 +1,45 @@
+command /parkourrace2:
+	description: Start the parkour race 2 #ALPHA COMMAND#
+	trigger:
+		if {isinparkour2.%player%} is not set:
+			if {players} is 0:
+				teleport player to {parkourrace2point1}
+				add 1 to {players}
+				set {isinparkour2.%player%} to 1
+				message "<red>[DEBUG]<reset>%{players}%"
+				exit
+			if {players} is 1:
+				teleport player to {parkourrace2point2}
+				add 1 to {players}
+				set {isinparkour2.%player%} to 2
+
+				message "<red>[DEBUG]<reset>%{players}%"
+				exit
+			if {players} is greater than 1:
+				message "<red>[DEBUG]<reset>full"
+		message "<red>[DEBUG]<reset>%{players}%"
+		message "<red>[DEBUG]<reset>%{isinparkour2.%player%}%"
+
+on exit region "parkourrace2lobby":
+	{players} is greater than 0
+	remove 1 from {players}
+	delete {isinparkour2.%player%}
+	message "<red>[DEBUG]<reset>%{players}%"
+
+on command:
+	player is in region "parkourrace2lobby":
+		player is not op
+		command is not "spawn"
+		cancel event
+		message "You can only use /spawn in the game"
+
+command /fix:
+	description: Start the parkour race 2 #ALPHA COMMAND#
+	trigger:
+		set {players} to 0
+		message "<red>[DEBUG]<reset>%{players}%"
+
+
+
+
+

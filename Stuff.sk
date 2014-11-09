@@ -1,0 +1,13 @@
+on death of player:
+	wait 1 tick
+	force respawn victim
+	apply blindness 127 to the player for 5 ticks
+	apply slowness 127 to the player for 5 ticks
+	apply night vision 127 to the player for 5 ticks
+	wait 2 ticks
+	teleport player to {spawnloc}
+
+
+command /actionbar <string>:
+	trigger:
+		send action bar from "&a%arg 1%" to player
