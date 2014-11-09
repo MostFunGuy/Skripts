@@ -1,2 +1,2 @@
 on load:
-	download "https://github.com/AN-JN/Skripts/raw/master/autoSkriptGit.sk" to "/home/minecraft/plugins/Skript/scripts/skript_auto_test/autoSkriptGit.sk"
+	download "https://github.com/AN-JN/Skripts/raw/master/autoSkriptGit.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
