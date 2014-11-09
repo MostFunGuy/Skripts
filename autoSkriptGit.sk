@@ -10,5 +10,5 @@ command /downloadGit:
 		download "https://github.com/AN-JN/Skripts/raw/master/Stuff.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
 		download "https://github.com/AN-JN/Skripts/raw/master/wand.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
 
-every 30 real second:
+every 30 real seconds:
 	message "30 Secs"
