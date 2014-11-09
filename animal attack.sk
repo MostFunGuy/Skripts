@@ -1,1 +1,3 @@
-command
+command /animalattack:
+  trigger:
+    make all pigs damage all cows by 1
