@@ -1,3 +1,4 @@
-on load:
-	download "https://github.com/AN-JN/Skripts/raw/master/autoSkriptGit.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
-	broadcast "DONE!"
+command /downloadGit:
+	trigger:
+		download "https://github.com/AN-JN/Skripts/raw/master/autoSkriptGit.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
+		broadcast "DONE!"
