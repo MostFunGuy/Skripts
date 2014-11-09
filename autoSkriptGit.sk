@@ -11,4 +11,4 @@ command /downloadGit:
 		download "https://github.com/AN-JN/Skripts/raw/master/wand.sk" to "/home/minecraft/plugins/Skript/scripts/wand.sk"
 
 every 30 real seconds:
-	message "30 Secs"
+	broadcast "30 Secs"
