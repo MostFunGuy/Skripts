@@ -1,6 +1,3 @@
-script options:
-    $ developer mode
-
 command /custgui:
 	trigger:
 		show "s;1;i;feather;n;&bTEST;l;&6NAME||%{clicked.%player%}%;c;add1toclicked %player%" with 1 row named "&aAbilities" to player
