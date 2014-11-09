@@ -1,3 +1,6 @@
+script options:
+    $ developer mode
+
 command /parkourrace2:
 	description: Start the parkour race 2 #ALPHA COMMAND#
 	trigger:

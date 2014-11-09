@@ -1,3 +1,6 @@
+script options:
+    $ developer mode
+
 on click on sign:
 	if line 3 of the block is "Solo Maze":
 		teleport player to {waitloc}

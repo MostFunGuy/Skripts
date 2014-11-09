@@ -1,3 +1,6 @@
+script options:
+    $ developer mode
+
 on pick up of stick:
 	if lore of item is "Basic Wand Item":
 		cancel event
