@@ -1,4 +1,12 @@
+script options:
+    $ developer mode
+
 command /downloadGit:
 	trigger:
 		download "https://github.com/AN-JN/Skripts/raw/master/autoSkriptGit.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
-		broadcast "DONE!"
+		download "https://github.com/AN-JN/Skripts/raw/master/mazeStart.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
+		download "https://github.com/AN-JN/Skripts/raw/master/parkourRace.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
+		download "https://github.com/AN-JN/Skripts/raw/master/powerUpItems.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
+		download "https://github.com/AN-JN/Skripts/raw/master/Stuff.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
+		download "https://github.com/AN-JN/Skripts/raw/master/wand.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
+
