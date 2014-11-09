@@ -1,9 +1,3 @@
-
-
-
-
-
-
 command /basicwand:
 	trigger:
 		set the player's level to 0
