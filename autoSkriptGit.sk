@@ -4,11 +4,11 @@ script options:
 command /downloadGit:
 	trigger:
 		download "https://github.com/AN-JN/Skripts/raw/master/autoSkriptGit.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
-		download "https://github.com/AN-JN/Skripts/raw/master/mazeStart.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
-		download "https://github.com/AN-JN/Skripts/raw/master/parkourRace.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
-		download "https://github.com/AN-JN/Skripts/raw/master/powerUpItems.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
-		download "https://github.com/AN-JN/Skripts/raw/master/Stuff.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
-		download "https://github.com/AN-JN/Skripts/raw/master/wand.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
+		download "https://github.com/AN-JN/Skripts/raw/master/mazeStart.sk" to "/home/minecraft/plugins/Skript/scripts/mazeStart.sk"
+		download "https://github.com/AN-JN/Skripts/raw/master/parkourRace.sk" to "/home/minecraft/plugins/Skript/scripts/parkourRace.sk"
+		download "https://github.com/AN-JN/Skripts/raw/master/powerUpItems.sk" to "/home/minecraft/plugins/Skript/scripts/powerUpItems.sk"
+		download "https://github.com/AN-JN/Skripts/raw/master/Stuff.sk" to "/home/minecraft/plugins/Skript/scripts/Stuff.sk"
+		download "https://github.com/AN-JN/Skripts/raw/master/wand.sk" to "/home/minecraft/plugins/Skript/scripts/wand.sk"
 
 every 30 real seconds:
 	message "30 Secs"
