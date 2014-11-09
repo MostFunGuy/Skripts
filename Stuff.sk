@@ -6,7 +6,7 @@ on death of player:
 	apply night vision 127 to the player for 5 ticks
 	wait 2 ticks
 	teleport player to {spawnloc}
-
+	message "hi"
 
 command /actionbar <string>:
 	trigger:
