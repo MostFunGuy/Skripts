@@ -1,6 +1,3 @@
-script options:
-    $ developer mode
-
 every 1 real day:
 	download "https://github.com/AN-JN/Skripts/raw/master/autoSkriptGit.sk" to "/home/minecraft/plugins/Skript/scripts/autoSkriptGit.sk"
 	download "https://github.com/AN-JN/Skripts/raw/master/mazeStart.sk" to "/home/minecraft/plugins/Skript/scripts/mazeStart.sk"
@@ -8,3 +5,4 @@ every 1 real day:
 	download "https://github.com/AN-JN/Skripts/raw/master/powerUpItems.sk" to "/home/minecraft/plugins/Skript/scripts/powerUpItems.sk"
 	download "https://github.com/AN-JN/Skripts/raw/master/Stuff.sk" to "/home/minecraft/plugins/Skript/scripts/Stuff.sk"
 	download "https://github.com/AN-JN/Skripts/raw/master/wand.sk" to "/home/minecraft/plugins/Skript/scripts/wand.sk"
+	execute console command "/skript reload scripts"
