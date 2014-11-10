@@ -15,12 +15,3 @@ on click on sign:
 	if line 3 of the block is "spawn":
 		execute console command "/warp spawn %player%"
 
-
-command /setloc:
-	trigger:
-		set {waitloc} to location of the player
-		set {location} to location at -403.5, 101, -3 in world "minigameworld"
-		set {loc1} to location at -1993.5, 110, -529.5 in world "minigameworld"
-		set {loc2} to location at -1985.5, 110, -539.5 in world "minigameworld"
-		set {parkourrace2point2} to location at -1985.5, 110, -532.5 in world "minigameworld"
-		set {parkourrace2point1} to location at -1993.5, 110, -532.5 in world "minigameworld"
