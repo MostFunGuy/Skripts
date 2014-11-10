@@ -25,17 +25,6 @@ on click with stick:
 				damage loop-entity by 3 hearts
 	else:
 		message "NO"
-	#set {_loc} to location at player's head
-	#set {_loc} to the location 1.7 meters in direction of player from location of {_loc}
-	#reduce the player's level progress by 0.05
-	#loop 50 times:
-	#	set {_loc} to the location 1.2 meter in direction of player from location of {_loc}
-
-	#	spawn 1 of particle fireworks Spark at {_loc}
-	#	loop all entities where [distance between {_loc} and entity input is less than 1]:
-	#		loop-entity is not player
-	#		damage loop-entity by 3 hearts
-#
 
 command /basicblaster:
 	trigger:
