@@ -14,8 +14,8 @@ on click with stick:
 		remove 1 of the held item from the player
 		set {_loc} to location at player's head
 		set {_loc} to the location 1.7 meters in direction of player from location of {_loc}
-		set the player's level progress to {level.%player%}
 		set {level.%player%} to {level.%player%} - 0.025
+		set the player's level progress to {level.%player%}
 		loop 50 times:
 			set {_loc} to the location 1.2 meter in direction of player from location of {_loc}
 
