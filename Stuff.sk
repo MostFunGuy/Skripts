@@ -1,11 +1,20 @@
-on death of player:
-	wait 1 tick
-	force respawn victim
-	apply blindness 127 to the player for 5 ticks
-	apply slowness 127 to the player for 5 ticks
-	apply night vision 127 to the player for 5 ticks
-	wait 2 ticks
-	teleport player to {spawnloc}
+#on death of player:
+#	damage is greater than or equal to health of victim
+#	cancel event
+#	apply blindness 127 to the player for 5 ticks
+#	heal the victim
+#	set victim's hunger bar to 20
+#	
+#	set {_pWorld} to players world
+#	set {_sLoc} to the location at 78, 19, -16
+#	teleport player to {spawnloc}
+#	
+#	if attacker is an entity:
+#		broadcast "%victim% slain by %attacker%"
+#	else:
+#		broadcast "%victim% slain by %damage cause%"
+#	stop
+
 
 command /actionbar <string>:
 	trigger:
